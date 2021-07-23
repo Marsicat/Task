@@ -10,10 +10,10 @@ public class OptionalTask {
         String [] stringNumbers = new String [n];
         System.out.println("Введите " + n + " чисел и нажмите enter");
         String number = scanner.nextLine();
-        String longNumber = "";
+        String longNumber = " ";
         String shortNumber = number;
         for (String i : number.split(" ")) {
-            if (i.length() < shortNumber.length()) {
+            if (i.length() < shortNumber.length()&& i.length() !=0) {
                 shortNumber = i;
             }
             if (i.length() > longNumber.length()) {
