@@ -15,10 +15,10 @@ public class Runner{
 
     public static void main(String[] args) {
         Bouquet bouquet = new Bouquet(flowers);
-        System.out.println("Количество цветов в букете " + bouquet.numberOfFlowers());
-        System.out.println("Стоимость цветов в букете " + bouquet.price());
+        System.out.printf("Количество цветов в букете %s%n", bouquet.numberOfFlowers());
+        System.out.printf("Стоимость цветов в букете %s%n", bouquet.price());
         System.out.println("Сортировка цветов в букете по уровню свежести: " );
         bouquet.ageSort();
-        System.out.println( "Цветок с заданным диапазоном стебля " + bouquet.stemSearch(60,70) );
+        System.out.printf( "Цветок с заданным диапазоном стебля %s",bouquet.stemSearch(60,70) );
     }
 }

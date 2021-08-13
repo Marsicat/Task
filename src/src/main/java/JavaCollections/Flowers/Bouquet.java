@@ -3,8 +3,8 @@ import java.util.*;
 
 public class Bouquet {
     public List<Flower> flowers;
-    double bouquetPrice;
-    int numberOfFlowers;
+    private double bouquetPrice;
+    private int numberOfFlowers;
 
     public Bouquet(List<Flower> flowers) {
         this.flowers = flowers;
@@ -29,7 +29,7 @@ public class Bouquet {
             }
         });
         for (int i = 0; i < flowers.size(); i++) {
-            System.out.print(flowers.get(i).getNameFlower() + "; ");
+            System.out.printf("%s;",flowers.get(i).getNameFlower() );
            }
         System.out.println();
     }

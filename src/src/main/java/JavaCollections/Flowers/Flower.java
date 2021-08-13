@@ -1,7 +1,7 @@
 package JavaCollections.Flowers;
 
 public class Flower {
-     String nameFlower;
+     private String nameFlower;
      private double priceFlower;
      private int lengthFlower;
      private int ageFlower;

@@ -1,13 +1,13 @@
 package JavaCollections.OptionalTask;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Stack;
+import java.util.*;
 
 public class NumbersInStack {
     public static void main (String[] args){
-        int number = 8895;
-        int arrayNumber [] = new int[4];
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введите число и нажмите enter");
+        int number = scanner.nextInt();
+        int arrayNumber [] = new int[String.valueOf(Math.abs(number)).length()];
         for (int i= arrayNumber.length-1;i>=0;i--) {
             arrayNumber[i] += number % 10;
             number /= 10;
@@ -16,7 +16,6 @@ public class NumbersInStack {
         for (int value : arrayNumber) {
             listArrayNumber.add(value);
         }
-        System.out.println(listArrayNumber);
 
         Stack<Integer> stackNumbers = new Stack<>();
         while(listArrayNumber.size() > 0) {
@@ -25,8 +24,14 @@ public class NumbersInStack {
         while(stackNumbers.size() > 0){
             listArrayNumber.add(stackNumbers.pop());
         }
-        System.out.println(listArrayNumber);
 
-
+        int finalArrayNumber[] = new int[listArrayNumber.size()];
+        for (int i=0; i< finalArrayNumber.length;i++){
+            finalArrayNumber[i] = listArrayNumber.get(i);
+        }
+        int finalNumber = 0;
+        for (int d : finalArrayNumber)
+            finalNumber= 10 * finalNumber + d;
+        System.out.println(finalNumber);
     }
 }

@@ -8,7 +8,7 @@ public class Month {
         System.out.println("Enter a number from 1 to 12");
         int i = scanner.nextInt();
         String month []= {"January", "February", "March", "April","May", "June", "July", "August", "September", "October", "November", "December"};
-        if ((i-1) >= 0 && i <= month.length) {
+        if (i >= 1 && i <= month.length) {
             System.out.println(month[(i-1)]);
         }
         else{
